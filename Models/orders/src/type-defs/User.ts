@@ -1,0 +1,9 @@
+export const User =
+  `
+  type User @key(fields: "id") {
+      id: ID
+      createDate: Timestamp
+      updateDate: Timestamp
+      orders: [Order]
+  }
+  `;

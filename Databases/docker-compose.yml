@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:latest
+    command: --authentication_policy=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: Atlas5678
+      MYSQL_USER: atlas
+      MYSQL_PASSWORD: Atlas1234
+    ports:
+      - '13306:3306'
+    networks:
+      - atlas
+    volumes:
+      - './atlas-mysql:/docker-entrypoint-initdb.d'
+    security_opt:
+      - seccomp:unconfined
+
+networks:
+  atlas:

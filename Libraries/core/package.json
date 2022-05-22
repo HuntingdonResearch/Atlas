@@ -1,0 +1,24 @@
+{
+  "name": "@atlas/core-library",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "clean": "rimraf lib",
+    "demolish": "rimraf node_modules package-lock.json"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.2",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.35",
+    "typescript": "^4.6.4"
+  },
+  "peerDependencies": {
+  }
+}

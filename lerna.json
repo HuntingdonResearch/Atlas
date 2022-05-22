@@ -1,0 +1,10 @@
+{
+  "packages": [
+    "Backends/*",
+    "Frontends/*",
+    "Libraries/*",
+    "Models/*",
+    "Tools/*"
+  ],
+  "version": "0.1.0"
+}
