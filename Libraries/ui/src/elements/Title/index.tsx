@@ -1,0 +1,65 @@
+import React, { FC } from 'react';
+import styled from 'styled-components';
+import { classNames } from './methods';
+import { TitleProps } from './props';
+
+const StyledH1: any = styled.h1.attrs((props: TitleProps) => ({
+  className: classNames`${props}`
+}))``;
+
+const StyledH2: any = styled.h2.attrs((props: TitleProps) => ({
+  className: classNames`${props}`
+}))``;
+
+const StyledH3: any = styled.h3.attrs((props: TitleProps) => ({
+  className: classNames`${props}`
+}))``;
+
+const StyledH4: any = styled.h4.attrs((props: TitleProps) => ({
+  className: classNames`${props}`
+}))``;
+
+const StyledH5: any = styled.h5.attrs((props: TitleProps) => ({
+  className: classNames`${props}`
+}))``;
+
+const StyledH6: any = styled.h6.attrs((props: TitleProps) => ({
+  className: classNames`${props}`
+}))``;
+
+const StyledP: any = styled.p.attrs((props: TitleProps) => ({
+  className: classNames`${props}`
+}))``;
+
+const Title: FC<TitleProps> = (props: TitleProps) => {
+  const {
+    size,
+    children,
+    ...otherProps
+  }: TitleProps = props;
+
+  switch (size) {
+    case 1:
+      return <StyledH1 size={size} {...otherProps}>{children}</StyledH1>;
+
+    case 2:
+      return <StyledH2 size={size} {...otherProps}>{children}</StyledH2>;
+
+    case 3:
+      return <StyledH3 size={size} {...otherProps}>{children}</StyledH3>;
+
+    case 4:
+      return <StyledH4 size={size} {...otherProps}>{children}</StyledH4>;
+
+    case 5:
+      return <StyledH5 size={size} {...otherProps}>{children}</StyledH5>;
+
+    case 6:
+      return <StyledH6 size={size} {...otherProps}>{children}</StyledH6>;
+
+    default:
+      return <StyledP {...otherProps}>{children}</StyledP>;
+  }
+};
+
+export default Title;
