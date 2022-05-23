@@ -4,6 +4,7 @@ import { ReviewsDataSource } from './data-source';
 
 export * from './data-source';
 export * from './entities';
+export * from './inputs';
 export * from './resolvers';
 export * from './type-defs';
 

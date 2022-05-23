@@ -9,6 +9,11 @@ import { Order } from './Order';
 import { Product } from './Product';
 import { User } from './User';
 
+import { LineInput } from './LineInput';
+import { LineRef } from './LineRef';
+import { OrderInput } from './OrderInput';
+import { OrderRef } from './OrderRef';
+
 import { Date } from './Date';
 import { JSON } from './JSON';
 import { Timestamp } from './Timestamp';
@@ -20,6 +25,10 @@ const types = [
   Order,
   Product,
   User,
+  LineInput,
+  LineRef,
+  OrderInput,
+  OrderRef,
   Date,
   JSON,
   Timestamp

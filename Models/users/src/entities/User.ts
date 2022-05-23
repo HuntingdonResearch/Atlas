@@ -17,6 +17,9 @@ export class User {
   userName: string;
 
   @Column()
+  saltHash: string;
+
+  @Column()
   birthDate: Date;
 
   @CreateDateColumn()

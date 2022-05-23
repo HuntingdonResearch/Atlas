@@ -1,6 +1,6 @@
 export const Query =
   `
   type Query {
-      getUser(id: ID): User
+      getUser(userID: ID): User
   }
   `;

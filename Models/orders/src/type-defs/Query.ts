@@ -1,6 +1,6 @@
 export const Query =
   `
   type Query {
-      getOrder(id: ID): Order
+      getOrder(orderID: ID): Order
   }
   `;
