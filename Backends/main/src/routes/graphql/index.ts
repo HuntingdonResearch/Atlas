@@ -35,8 +35,9 @@ async function waitForService(name: string, statusURL: string): Promise<void> {
   while (!isAlive && remainingCount > 0) {
     try {
       isAlive = await checkService(name, statusURL);
-    } catch (error) {
+
       await timeout(1000);
+    } catch (error) {
     } finally {
       remainingCount--;
     }
@@ -54,6 +55,8 @@ async function waitForServices(): Promise<void> {
 }
 
 async function createApolloGateway(): Promise<ApolloGateway> {
+  await waitForServices();
+
   const apolloGateway = new ApolloGateway({
     supergraphSdl: new IntrospectAndCompose({
       subgraphs: SERVICE_LIST
