@@ -1,4 +1,5 @@
-import styled, { keyframes } from 'styled-components';
+import { keyframes } from '@emotion/react';
+import styled from '@emotion/styled';
 
 export const StyledDiv = styled.div`
   text-align: center;
@@ -36,3 +37,8 @@ export const StyledLogo = styled.img`
 export const StyledLink = styled.a`
   color: #61dafb;
 `;
+
+export const StyledCode = styled.code`
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+`;
+

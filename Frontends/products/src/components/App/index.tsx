@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledDiv, StyledHeader, StyledLink, StyledLogo } from './styles';
+import { StyledCode, StyledDiv, StyledHeader, StyledLink, StyledLogo } from './styles';
 import Logo from './logo.svg';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
       <StyledHeader>
         <StyledLogo src={Logo} alt="Atlas"/>
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Edit <StyledCode>src/App.tsx</StyledCode> and save to reload.
         </p>
         <StyledLink
           href="https://reactjs.org"
