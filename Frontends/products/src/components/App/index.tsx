@@ -1,8 +1,9 @@
 import React from 'react';
 import { StyledCode, StyledDiv, StyledHeader, StyledLink, StyledLogo } from './styles';
 import Logo from './logo.svg';
+import { AppProps } from './props';
 
-function App() {
+function App(props: AppProps) {
   return (
     <StyledDiv>
       <StyledHeader>

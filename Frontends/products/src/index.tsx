@@ -1,5 +1,6 @@
 import React, { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import { render, unmountComponentAtNode } from 'react-dom';
+import { parseHtmlToReact } from '@atlas/ui-library';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
@@ -7,17 +8,45 @@ import './index.css';
 
 const TAG_NAME = 'products-app';
 
-const root = createRoot(
-  document.getElementsByTagName(TAG_NAME)[0] as HTMLElement
-);
-
 class AppElement extends HTMLElement {
+  private observer: MutationObserver;
+
+  constructor() {
+    super();
+
+    this.observer = new MutationObserver(() => this.update());
+    this.observer.observe(this, { attributes: true });
+  }
+
   connectedCallback() {
-    root.render(
+    this.mount();
+  }
+
+  disconnectedCallback() {
+    this.unmount();
+    this.observer.disconnect();
+  }
+
+  update() {
+    this.unmount();
+    this.mount();
+  }
+
+  private mount() {
+    const props = {
+      children: parseHtmlToReact(this.innerHTML)
+    };
+
+    render(
       <StrictMode>
-        <App/>
-      </StrictMode>
-    )
+        <App {...props} />
+      </StrictMode>,
+      document.getElementsByTagName(TAG_NAME)[0]
+    );
+  }
+
+  private unmount() {
+    unmountComponentAtNode(this);
   }
 }
 

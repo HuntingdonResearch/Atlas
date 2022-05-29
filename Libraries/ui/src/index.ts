@@ -73,6 +73,8 @@ export { default as useClickAwayEvent } from './hooks/useClickAwayEvent';
 export { default as useKeyEvent } from './hooks/useKeyEvent';
 export { default as useModal } from './hooks/useModal';
 
+export * from './methods/parseHtmlToReact';
+
 export * from './types/BackColor';
 export * from './types/ClassNameFunc';
 export * from './types/IconCollection';

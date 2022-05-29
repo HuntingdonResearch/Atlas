@@ -1,6 +1,7 @@
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
+import json from '@rollup/plugin-json';
 import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
 
@@ -23,6 +24,7 @@ export default {
   plugins: [
     peerDepsExternal(),
     resolve(),
+    json(),
     commonjs(),
     typescript({ useTsconfigDeclarationDir: true }),
     postcss({

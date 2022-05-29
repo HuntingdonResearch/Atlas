@@ -18,6 +18,7 @@
     "start:storybook": "start-storybook -p 6006"
   },
   "dependencies": {
+    "html-to-react": "^1.4.8"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
@@ -26,6 +27,7 @@
     "@babel/preset-react": "^7.17.12",
     "@fortawesome/fontawesome-free": "^6.1.1",
     "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@storybook/addon-actions": "^6.5.4",
     "@storybook/addon-docs": "^6.5.4",
