@@ -9,7 +9,7 @@ function App(props: AppProps) {
       <StyledHeader>
         <StyledLogo src={Logo} alt="Atlas"/>
         <p>
-          Edit <StyledCode>src/App.tsx</StyledCode> and save to reload.
+          Edit <StyledCode>src/App.tsx</StyledCode> in <StyledCode>users-frontend</StyledCode> and save to reload.
         </p>
         <StyledLink
           href="https://reactjs.org"

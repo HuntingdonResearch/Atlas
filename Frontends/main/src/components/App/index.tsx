@@ -1,24 +1,57 @@
 import React from 'react';
-import { StyledCode, StyledDiv, StyledHeader, StyledLink, StyledLogo } from './styles';
-import Logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
+import { UsersFrontend } from '../UsersFrontend';
+import { ProductsFrontend } from '../ProductsFrontend';
+import { OrdersFrontend } from '../OrdersFrontend';
+import { ReviewsFrontend } from '../ReviewsFrontend';
 
 function App() {
   return (
-    <StyledDiv>
-      <StyledHeader>
-        <StyledLogo src={Logo} alt="Atlas"/>
-        <p>
-          Edit <StyledCode>src/App.tsx</StyledCode> and save to reload.
-        </p>
-        <StyledLink
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </StyledLink>
-      </StyledHeader>
-    </StyledDiv>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+            <li>
+              <Link to="/products">Products</Link>
+            </li>
+            <li>
+              <Link to="/orders">Orders</Link>
+            </li>
+            <li>
+              <Link to="/reviews">Reviews</Link>
+            </li>
+          </ul>
+        </nav>
+        <Switch>
+          <Route path="/users">
+            <UsersFrontend/>
+          </Route>
+          <Route path="/products">
+            <ProductsFrontend/>
+          </Route>
+          <Route path="/orders">
+            <OrdersFrontend/>
+          </Route>
+          <Route path="/reviews">
+            <ReviewsFrontend/>
+          </Route>
+          <Route path="/">
+            <div></div>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

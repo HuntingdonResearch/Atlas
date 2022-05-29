@@ -12,5 +12,6 @@
     <orderEntry type="library" name="react-dom" level="application" />
     <orderEntry type="library" name="react-is" level="application" />
     <orderEntry type="library" name="styled-components" level="application" />
+    <orderEntry type="library" name="react-router-dom" level="application" />
   </component>
 </module>

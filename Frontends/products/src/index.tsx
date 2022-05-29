@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 import './index.css';
 
-const TAG_NAME = 'products-app';
+const TAG_NAME = 'products-frontend';
 
 class AppElement extends HTMLElement {
   private observer: MutationObserver;

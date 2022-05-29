@@ -18,7 +18,7 @@
     <file url="file://$PROJECT_DIR$/Models/products" libraries="{Atlas/Models/products/node_modules}" />
     <file url="file://$PROJECT_DIR$/Models/reviews" libraries="{Atlas/Models/reviews/node_modules}" />
     <file url="file://$PROJECT_DIR$/Models/users" libraries="{Atlas/Models/users/node_modules}" />
-    <file url="PROJECT" libraries="{Atlas/Backends/main/node_modules, Atlas/Backends/orders/node_modules, Atlas/Backends/products/node_modules, Atlas/Backends/reviews/node_modules, Atlas/Backends/users/node_modules, Atlas/Frontends/main/node_modules, Atlas/Frontends/orders/node_modules, Atlas/Frontends/products/node_modules, Atlas/Frontends/reviews/node_modules, Atlas/Frontends/users/node_modules, Atlas/Libraries/core/node_modules, Atlas/Libraries/ui/node_modules, Atlas/Models/orders/node_modules, Atlas/Models/products/node_modules, Atlas/Models/reviews/node_modules, Atlas/Models/users/node_modules, Atlas/node_modules, react, react-dom, react-is, styled-components}" />
+    <file url="PROJECT" libraries="{Atlas/Backends/main/node_modules, Atlas/Backends/orders/node_modules, Atlas/Backends/products/node_modules, Atlas/Backends/reviews/node_modules, Atlas/Backends/users/node_modules, Atlas/Frontends/main/node_modules, Atlas/Frontends/orders/node_modules, Atlas/Frontends/products/node_modules, Atlas/Frontends/reviews/node_modules, Atlas/Frontends/users/node_modules, Atlas/Libraries/core/node_modules, Atlas/Libraries/ui/node_modules, Atlas/Models/orders/node_modules, Atlas/Models/products/node_modules, Atlas/Models/reviews/node_modules, Atlas/Models/users/node_modules, Atlas/node_modules, react, react-dom, react-is, react-router-dom, styled-components}" />
     <includedPredefinedLibrary name="HTTP Response Handler" />
   </component>
 </project>
